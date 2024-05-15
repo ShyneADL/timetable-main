@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --blue: #4285F4;
+    --light-blue: #DDE7F8;
+    --very-light-blue: #FAFCFF;
+    --green: #00AC64;
+    --light-green: #51F0A5;
+    --very-light-green: #A3F5CE;
+    --dark-grey: #484848;
+    --light-grey: #D9D9D9;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manjari", sans-serif;
+    background-color: #FAFCFF;
+}
+
+h3 {
+  line-height: normal;
+}
+
+
+
+.icon {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+}
+
+.big_text {
+    font-family: 'Manjari', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    color: var(--blue)
+}
+
+.bold_text {
+    font-weight: 700;
+}
+
+.timetable {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(6, 1fr); 
+    border: 1px solid var(--blue); 
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  }
+  
+  .timetable > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue); 
+  }
+
+  .timetable > div:first-child {
+    border-top-left-radius: 8px;
+  }
+
+  .timetable > div:last-child {
+    border-bottom-right-radius: 8px;
+  }
+  .timetable > div:nth-child(27) {
+    border-bottom-left-radius: 8px;
+  }
+  .timetable > div:nth-child(6) {
+    border-top-right-radius: 8px;
+  }
+
+  
+
+  .vertical-text {
+    grid-column: 4;       
+    grid-row: 1 / 7;      
+    /* writing-mode: vertical-rl;  */
+    text-align: center;    
+    display: flex;         
+    align-items: center;   
+    justify-content: center;
+    border:none;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  .vertical-text > br {
+    margin-top: 12px;
+  }
+
+  .time-header, .day-header {
+    background-color: var(--light-blue); /* Light gray background for headers */
+    border: 1px solid #ddd;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 16px;
+    text-align: center;
+    min-width: 143px;
+  }
+  
+  .cell {
+    border: 1px solid #ddd;
+    padding: 30px 20px ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cell > h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.22px;
+    color: var(--blue);
+    width: fit-content;
+  }
+
+  .cell > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    width: fit-content;
+  }
+
+  .timetable .time-header:nth-child(5),
+  .timetable .cell:nth-child(5n + 5) { 
+    background-color: #f8f8f8;
+  }
+  
+
+.course_selector, .sessions {
+  border-radius: 8px;
+  width: 350px;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+}
+
+.course_selector > div, .sessions > div {
+  border-radius: 8px 8px 0 0;
+  padding: 12px;
+}
+
+.vertical-line {
+  transform: rotate(90deg);
+  width: 27px;
+  height: 2.8px;
+  background-color: white;
+  border-radius: 8px;
+}
