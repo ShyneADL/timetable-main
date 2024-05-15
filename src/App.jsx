@@ -83,8 +83,8 @@ const onDragEnd = (result) => {
         <div class="time-header">Day/Hour</div>
         <div class="time-header">8:00 - 10:00</div>
         <div class="time-header">10:00 - 12:00</div>
-        <div class="vertical-text">L<br/>U<br/>N<br/>C<br/>H<br/><br/>B<br/>R<br/>E<br/>A<br/>K</div>
         <div class="time-header">1:00 - 3:00</div>
+        <div class="vertical-text">L<br/>U<br/>N<br/>C<br/>H<br/><br/>B<br/>R<br/>E<br/>A<br/>K</div>
         <div class="time-header">3:00 - 5:00</div>
 
         {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map((day) => (
