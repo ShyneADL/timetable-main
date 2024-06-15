@@ -1,51 +1,70 @@
 export const courseData = [
     {
+    id: 'csc402',
     code: 'CSC402',
     title: 'Compiler Construction',
     lecturer: 'Dr Ojo',
     day: 'tuesday',
     timeslot: '10:00 - 12:00',
-    type: 'compulsory'
+    type: 'compulsory',
+    sessionStart: '14',
+    sessionEnd: '32',	
     },
     {
+    id: 'csc406',
     code: 'CSC406',
     title: 'Data Management II',
     lecturer: 'Dr Oduroye',
     day: 'thursday',
     timeslot: '1:00 - 3:00',
-    type: 'compulsory'
+    type: 'compulsory',
+    sessionStart: '16',
+    sessionEnd: '33',
     },
     {
+    id: 'csc408',
     code: 'CSC408',
     title: 'Operation Research',
     lecturer: 'Mr Adegunwa',
     day: 'tuesday',
     timeslot: '1:00 - 3:00',
-    type: 'compulsory'
+    type: 'compulsory',
+    sessionStart: '13',
+    sessionEnd: '31',
     },
     {
-    code: 'CSC410',
-    title: '',
+    id: 'csc404',
+    code: 'CSC404',
+    title: 'Computer Networks',
     lecturer: 'Mr Dan',
     day: 'thursday',
     timeslot: '10:00 - 12:00',
-    type: 'compulsory'
+    type: 'compulsory',
+    sessionStart: '17',
+    sessionEnd: '35',
     },
     {
+    id: 'csc412',
     code: 'CSC412',
     title: 'Project Management',
     lecturer: 'Prof Olabiyisi',
     day: 'wednesday',
     timeslot: '10:00 - 12:00',
-    type: 'elective'
+    type: 'elective',
+    sessionStart: '14',
+    sessionEnd: '28',
     },
-    // {
-    // code: 'CSC414',
-    // title: 'Optimization Techniques',
-    // lecturer: 'Dr Rotimi',
-    // day: 'wednesday',
-    // timeslot: '10:00 - 12:00',
-    // type: 'elective'
-    // },
+    {
+    id: 'csc414',
+    code: 'CSC414',
+    title: 'Optimization Techniques',
+    lecturer: 'Dr Rotimi',
+    day: 'wednesday',
+    timeslot: '10:00 - 12:00',
+    type: 'elective',
+    sessionStart: '8',
+    sessionEnd: '28',
+
+    },
 
 ]

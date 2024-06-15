@@ -31,7 +31,6 @@ h3 {
 }
 
 
-
 .icon {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
 }
@@ -49,21 +48,23 @@ h3 {
 }
 
 .timetable {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    grid-template-rows: repeat(6, 1fr); 
-    border: 1px solid var(--blue); 
-    max-width: 70%;
-    border-radius: 8px;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
-  }
-  
-  .timetable > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--blue); 
-  }
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns for days */
+  grid-template-rows: repeat(6, 1fr); /* 6 rows for time slots (including headers) */
+  border: 1px solid var(--blue);
+  max-width: 70%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;  /* Allow horizontal scrolling if needed */
+}
+
+.timetable > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--blue);
+  min-width: 120px;   /* Set a minimum width for cells */
+}
 
   .timetable > div:first-child {
     border-top-left-radius: 8px;
@@ -79,8 +80,6 @@ h3 {
     border-top-right-radius: 8px;
   }
 
-  
-
   .vertical-text {
     grid-column: 4;       
     grid-row: 1 / 7;      
@@ -93,6 +92,7 @@ h3 {
     color: var(--blue);
     font-weight: 700;
     font-size: 28px;
+    padding: 0 6px;
   }
 
   .vertical-text > br {
@@ -119,6 +119,19 @@ h3 {
     justify-content: center;
     flex-direction: column;
     gap: 4px;
+    height: 110px;
+  }
+
+  @media screen and (max-width:900px) {
+    .cell {
+      padding: 20px 15px;
+    }
+    .time-header, .day-header {
+      padding: 6px 14px;
+    }
+    .timetable {
+      min-width: 100vw;
+    }
   }
 
   .cell > h4 {
